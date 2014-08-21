@@ -13,6 +13,8 @@ Download and include the php file.
 Usage
 -----
 
+> For more methods, see the [Slack API](https://api.slack.com/)
+
 List users
 
 ```php
