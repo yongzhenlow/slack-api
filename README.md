@@ -15,17 +15,24 @@ Usage
 
 > See more methods on the [Slack API documentation](https://api.slack.com/methods).
 
+Initializing  
+Requires a legacy token, read more about it [here](https://api.slack.com/custom-integrations/legacy-tokens).
+
+```php
+$Slack = new Slack('xoxp-your-legacy-token');
+```
+
 List users
 
 ```php
-$Slack = new Slack('xoxp-0123456789-0123456789-0123456789-1a1a11');
+$Slack = new Slack('xoxp-your-legacy-token');
 print_r($Slack->call('users.list'));
 ```
 
 Invite user to a channel
 
 ```php
-$Slack = new Slack('xoxp-0123456789-0123456789-0123456789-1a1a11');
+$Slack = new Slack('xoxp-your-legacy-token');
 print_r($Slack->call('channels.invite', array(
   'channel' => 'C1234567890',
   'user' => 'U1234567890'
